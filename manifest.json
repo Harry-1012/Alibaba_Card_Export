@@ -1,0 +1,28 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js", "jquery.min.js", "bsf.js", "apihelper.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Mailucky"
+   },
+   "content_scripts": [ {
+      "js": [ "contact_exporter.js" ],
+      "matches": [ "*://profile.alibaba.com/receive_list.htm" ]
+   } ],
+   "description": "Click to export contacts.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "64": "icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0Sii2+64Fvbl990+GNf9jZ5VmCfHUXM/m2j55F0Pjsz4ZH9EZp60XIGi9KoTvgsFNaFkPUGdirhdEANRwjnadIprjJYaZRFckbQA66XMCYzuy2HrB7URwj4KsLC95VmGcCp43KHWbezyJsYeA0/exfDlyTlxGfSyjffCoNlbVQ49IaJclrU38UhZwvFXsmmomkkFCTDKaPclcQGeO4wv8fcDeZnOYuvbqlEKwbEmeeCP5AVx8H4r1PzRS4EeS4xXYdB+JY2wZX+r5ZIWEXunV56JRKkfIrVafPMlrA4+sLtlFv95NcPL3JGmYiH5pHJoOoQ/1cQN53b3A1gfg2akKQIDAQAB",
+   "manifest_version": 2,
+   "name": "Mailucky",
+   "permissions": [ "*://profile.alibaba.com/receive_list.htm" ],
+   "version": "1.0"
+}

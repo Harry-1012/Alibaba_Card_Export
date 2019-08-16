@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>contacts</title>
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
+    <script src="htmlhelper.js"></script>
+</head>
+
+<body style="min-width:475px;min-height:105px;">
+    <div style="position:fixed;margin-top: -20px;width: -webkit-fill-available;background-color:white;">
+        <div id="Header">
+            <h3 style="height:5px;">Export contacts
+                <span id="custStatus" style="float: right;margin-right: 50px;font-size: 15px;">学习版本</span>
+            </h3>
+            <div>A. 此版本为学习版本,仅用于学习用途,勿作他用,商业使用请联系:www.leadwolf.net</div>
+            <div>B. 抓取前请删除网址https://profile.alibaba.com/receive_list.htm后面的随机代码</div>
+            <div>C. 由于数据抓取量大,点击后需稍等1-2秒等待软件反应</div>
+        </div>
+        <div id="Header2">
+            <hr>
+            <input type="button" id="btnExport" value="Export to CSV" />
+            <input type="button" id="btnStart" value="Start" title="Start loading contacts.." />
+            <label id="lblStartPage" for="txtStartPage">Start Page</label>
+            <input type="text" data-minval="1" style="display:inline-block;width:50px;" id="txtStartPage" />
+            <label id="lblEndPage" for="txtEndPage">End Page</label>
+            <input type="text" data-minval="1" style="display:inline-block;width:50px;" id="txtEndPage" />
+            <div style="display:inline-block;" id="loader">Click Start to load contacts..</div>
+            <hr>
+        </div>
+    </div>
+    <div style="padding-top: 105px;width: -webkit-fill-available;" id="Container">
+        <div id="tblc">
+            <table id="tblContacts">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Company Name</th>
+                        <th>Country</th>
+                        <th>Email</th>
+                        <th>Tel</th>
+                        <th>Fax</th>
+                        <th>Mob</th>
+                        <th>Website</th>
+                        <th>From</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="csv-convertor.js"></script>
+</body>
+
+</html>
